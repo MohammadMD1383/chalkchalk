@@ -1,13 +1,16 @@
 {
-	"name": "chalk",
+	"name": "chalkchalk",
 	"version": "5.3.0",
 	"description": "Terminal string styling done right",
 	"license": "MIT",
-	"repository": "chalk/chalk",
-	"funding": "https://github.com/chalk/chalk?sponsor=1",
+	"repository": "https://github.com/MohammadMD1383/chalkchalk",
 	"type": "module",
-	"main": "./source/index.js",
-	"exports": "./source/index.js",
+	"exports": {
+		".": {
+			"import": "./source/index.js",
+			"require": "./cjs/dist/index.js"
+		}
+	},
 	"imports": {
 		"#ansi-styles": "./source/vendor/ansi-styles/index.js",
 		"#supports-color": {
@@ -20,6 +23,7 @@
 		"node": "^12.17.0 || ^14.13 || >=16.0.0"
 	},
 	"scripts": {
+		"build": "tsc -p tsconfig.json",
 		"test": "xo && c8 ava && tsd",
 		"bench": "matcha benchmark.js"
 	},
@@ -50,6 +54,7 @@
 		"text"
 	],
 	"devDependencies": {
+		"typescript": "^5.4.5",
 		"@types/node": "^16.11.10",
 		"ava": "^3.15.0",
 		"c8": "^7.10.0",
