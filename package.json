@@ -1,7 +1,8 @@
 {
 	"name": "chalkchalk",
-	"version": "5.3.0",
-	"description": "Terminal string styling done right",
+	"version": "5.3.0-patch.1",
+	"author": "Mohammad Mostafa Dastjerdi",
+	"description": "Terminal string styling done right. This package is both cjs/esm compatible!",
 	"license": "MIT",
 	"repository": "https://github.com/MohammadMD1383/chalkchalk",
 	"type": "module",
@@ -29,7 +30,8 @@
 	},
 	"files": [
 		"source",
-		"!source/index.test-d.ts"
+		"!source/index.test-d.ts",
+		"cjs"
 	],
 	"keywords": [
 		"color",
